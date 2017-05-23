@@ -1,5 +1,12 @@
-var pug = require('pug')
+import express from 'express'
 
-console.log(pug.compile('a #{name}')({ name: 'HieuNV' }))
+let app = express()
+app.set('view engine', 'pug')
+app.get('/',  (req, res) => {
+    
+    res.render('index')
+})
 
-console.log(pug.renderFile('./templates/test-1.pug'))
+app.use(express.static('./'))
+
+app.listen(3000, '0.0.0.0')

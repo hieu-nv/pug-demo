@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "standard --fix"
+    "test": "standard --fix",
+    "dev": "nodemon index.js --exec babel-node --presets env"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,12 @@
   },
   "homepage": "https://github.com/hieunv8/pug-demo#readme",
   "dependencies": {
-    "pug": "^2.0.0-rc.1"
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.1",
+    "xlsx": "^0.10.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.1"
   }
 }
